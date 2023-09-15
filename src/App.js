@@ -1,10 +1,9 @@
-import { Container } from 'react-bootstrap';
 import './App.css';
+import { Container } from 'react-bootstrap';
 import { Routes, Route } from 'react-router-dom';
 import ProductAll from './page/ProductAll';
-import ProductDetail from './page/ProductDetail';
 import LoginPage from './page/LoginPage';
-import UserPage from './page/UserPage';
+/* import UserPage from './page/UserPage'; */
 import Navbar from './component/Navbar';
 import { useState, useEffect } from 'react';
 import PrivateRoute from './route/PrivateRoute';
@@ -12,7 +11,7 @@ import PrivateRoute from './route/PrivateRoute';
 
 
 function App() {
-  const [authenticate, setAuthenticate]= useState(false);
+  const [authenticate, setAuthenticate] = useState(false);
 
   /* 
     useEffect( () => {})
@@ -27,8 +26,8 @@ function App() {
     2)useEfeect( () {},[value])
     --> value의 값이 바뀔 때마다 실행
   */
-  useEffect (()=> {
-    console.log(authenticate)
+  useEffect(()=> {
+    console.log(authenticate);
   },[authenticate])
   return (
     <Container>
