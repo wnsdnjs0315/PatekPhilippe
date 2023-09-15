@@ -48,8 +48,8 @@ const Navbar = ({authenticate, setAuthenticate}) => { //앱에서 선언해놓�
           </button>
           <ul class="side-menu-list">
             {
-              menuList.map((menu, idx) =>(
-                <li ley={idx}><a href="#">{menu}</a></li>
+               menuList.map((menu, idx) => (
+                <li key={idx}><a href="#">{menu}</a></li>
               ))
             }
           </ul>
