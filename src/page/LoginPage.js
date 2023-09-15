@@ -6,7 +6,8 @@ const LoginPage = ({setAuthenticate}) => {
   const navigate = useNavigate();
 
   //submin 버튼을 클릭할 때마다 form이 매번 새로고침되므로 콘솔창에서 텍스트가 사라짐
-  //form을 쓸 때는 form이 새로고침되는 것을 막아주는 e.preventDefault()를 써준다
+  //form을 쓸 때는 form이 새로고침되는 것을 막아주는 e.preventdefault()를 써준다
+
   const loginUser = (e) => {
     e.preventDefault();
     console.log("Login user function issue")
@@ -17,7 +18,7 @@ const LoginPage = ({setAuthenticate}) => {
   return (
     <div className='form-area'>
       {/* 버튼 type이 submit일 경우에는 onClick 이벤트를 주지 않는다 */}
-      <Form omSubmit={(e)=>loginUser(e)}>
+      <Form onSubmit={(e)=>loginUser(e)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
