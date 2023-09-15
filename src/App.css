@@ -128,7 +128,7 @@ body {font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSys
 
 
 /* side menu */
-.side_menu {
+.side-menu {
   height: 100%;
   width: 280px;
   position: fixed;
@@ -139,15 +139,15 @@ body {font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSys
   transition: .5s;
   z-index: 2;
 }
-.side_menu .close-button {
+.side-menu .close-button {
   position: absolute;
   top: 50; right: 25px;
   margin-left: 50px;
   border: none;
   background: none;
 }
-.side_menu .close-button img {width: 40px;}
-.side_menu .side-menu-list {
+.side-menu .close-button img {width: 40px;}
+.side-menu .side-menu-list {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -167,6 +167,7 @@ body {font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSys
 .side-menu-list li > a:hover {
   background: #a8927b;
   color: #fff;
+  cursor: pointer;
 }
 
 
