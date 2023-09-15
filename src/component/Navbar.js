@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
-import { navigate } from 'react-router-dom';
 
 
 const Navbar = (authenticate, setAuthenticate) => {
@@ -21,10 +20,10 @@ const Navbar = (authenticate, setAuthenticate) => {
   /* 사이드바메뉴 */
   let [width, setWidth] = useState(0)
 
-  /* const navigate = useNavigate();
+  const navigate = useNavigate();
   const goToLogin = () => {
     navigate('/login')
-  } */
+  }
   //리엑트에서는 인풋 요소의 읽어오는 값이 이벤트에 있음
   const search = (e) => {
     //console.log('key press')
@@ -67,12 +66,12 @@ const Navbar = (authenticate, setAuthenticate) => {
                 authenticate ? (
                   <div onClick={()=>setAuthenticate(false)}>
                     <FontAwesomeIcon icon={faUser} />
-                    <span style={{cursor:pointer}}>로그아웃</span>
+                    <span style={{cursor:'pointer'}}>로그아웃</span>
                   </div>
                 ) :(
                   <div onClick={()=>navigate('/login')}>
                     <FontAwesomeIcon icon={faUser} />
-                    <span style={{cursor:pointer}}>로그인</span>
+                    <span style={{cursor:'pointer'}}>로그인</span>
                   </div>
                 )
               }
@@ -81,10 +80,10 @@ const Navbar = (authenticate, setAuthenticate) => {
         
 
 
-        <div className='login-button' /* onClick={navigate('/login')} */>
+        {/* <div className='login-button' onClick={goToLogin}>
           <FontAwesomeIcon icon={faUser} />
           <span className='login-text'>로그인</span>
-        </div>
+        </div> */}
         <div class="logo">
           {/* <img src={require('../img/logo_patek_beige.svg')} alt="로고" /> */}
           <Link to='/'>
