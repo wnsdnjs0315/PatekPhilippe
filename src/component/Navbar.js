@@ -71,10 +71,14 @@ const Navbar = ({authenticate, setAuthenticate}) => { //앱에서 선언해놓�
                     <span style={{cursor:'pointer'}}>로그아웃</span>
                   </div>
                 ) :(
-                  <div onClick={()=>setAuthenticate(true)}>
-                    <FontAwesomeIcon icon={faUser}/>
+                  <div onClick={()=>navigate('/login')}>
+                    <FontAwesomeIcon icon={faUser} />
                     <span style={{cursor:'pointer'}}>로그인</span>
                   </div>
+                  /* <div onClick={()=>setAuthenticate(true)}>
+                    <FontAwesomeIcon icon={faUser}/>
+                    <span style={{cursor:'pointer'}}>로그인</span>
+                  </div> */
                 )
               }
         </div>
